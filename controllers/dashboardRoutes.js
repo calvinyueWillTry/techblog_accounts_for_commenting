@@ -23,7 +23,7 @@ router.get('/', withGuard, async (req, res) => {
 });
 
 router.get('/new', withGuard, (req, res) => {
-  res.render('newPost', {
+  res.render('Posting', {
     dashboard: true,
     loggedIn: req.session.logged_in,
   });

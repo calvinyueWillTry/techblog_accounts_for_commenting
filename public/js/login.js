@@ -2,10 +2,10 @@ const loginFormHandler = async function (event) {
   event.preventDefault();
 
   const usernameEl = document
-    .querySelector('#username-input-login')
+    .querySelector('#username-input-login')// line 8: id from login.handlebars
     .value.trim();
   const passwordEl = document
-    .querySelector('#password-input-login')
+    .querySelector('#password-input-login')//line 12: id from login.handlebars
     .value.trim();
 
   const response = await fetch('/api/users/login', {
@@ -25,5 +25,5 @@ const loginFormHandler = async function (event) {
 };
 
 document
-  .querySelector('#login-form')
-  .addEventListener('submit', loginFormHandler);
+  .querySelector('#login-form')//line 5 <form id="login-form" class="card-body">
+  .addEventListener('submit', loginFormHandler);//button for page
