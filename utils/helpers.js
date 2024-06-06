@@ -1,13 +1,20 @@
-const date = require('date-and-time');
-module.exports = {//mongodb-macos-x86_64-7.0.11.tgz
-
-  formatDate: (dated) => {
-    // Format date as MM/DD/YYYY (TODO)
-    const time = new Date(dated);
-    const month = time.getMonth();
-    const day = time.getDate();
-    const year = time.getFullYear();
-    return `${month}/${day}/${year}`;
-    //return dated.toLocaleDateString();
+module.exports = {
+  formatDate: (date) => {
+    // Format date as MM/DD/YYYY
+    return date.toLocaleString();
   },
 };
+// module.exports = {
+
+//   formatDate: (dated) => {
+//     // Format date as MM/DD/YYYY (TODO)
+//     const time = new Date(dated);
+//     const month = time.getMonth()+1;
+//     const day = time.getDate();
+//     const year = time.getFullYear();
+//     const hour = time.getHours();
+//     const minutes = time.getMinutes()
+//     return `${month}/${day}/${year} ${hour}:${minutes}`;
+//     //return dated.toLocaleDateString();
+//   },
+// };
