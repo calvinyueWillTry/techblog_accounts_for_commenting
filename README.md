@@ -1,4 +1,8 @@
 # tech-blog
+#Video Walkthrough
+https://drive.google.com/file/d/1nyhZKwz4zx1-UxyIykv17RqcZgwQLBmu/view
+
+#Overview
 In summary for how this operates, the server.js page imports the folders and files and the npm installs that can be utilized, including express, sequelize and access restrictions.
 In the controllers folder, the routes start with the index.js page at the top level of the folder, to direct to the correct page. 
 <img width="1092" alt="Screen Shot 2024-06-07 at 12 24 37 PM" src="https://github.com/calvinyueWillTry/techblog_accounts_for_commenting/assets/158237430/b00aac7a-2fc9-4dc6-9c44-d0a193f0c7be">
