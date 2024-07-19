@@ -34,11 +34,11 @@ User.init(
         newUserData.password = await bcrypt.hash(newUserData.password, 10);//user's password in newUserData is hashed using bcrypt.hash with a cost factor of 10
         return newUserData;//(which determines the complexity of the hashing algorithm)
       },//hashed password is then returned back to the same variable 
-      beforeUpdate: async (updatedUserData) => {//
-        updatedUserData.password = await bcrypt.hash(
+      beforeUpdate: async (updatedUserData) => {//modified  object with the re-hashed password is returned
+        updatedUserData.password = await bcrypt.hash( //combines bcrypt and hash
           updatedUserData.password,
           10
-        );
+        ); //now can be returned and saved in the database
         return updatedUserData;
       },
     },//see Comment.js for explanation

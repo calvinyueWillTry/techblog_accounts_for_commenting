@@ -1,29 +1,29 @@
 <div class="post">
   <article class="card">
     <div class="card-header flex-row justify-space-between">
-      <h2>{{post.title}}</h2>
-      <div>
+      <h2>{{post.title}}</h2><!-- displays the title of the post -->
+      <div><!-- displays the username of the post author -->
         Posted by {{post.user.username}} on {{post.createdAt}}
-      </div>
+      </div><!-- and the creation date of the post -->
     </div>
     <div class="card-body">
       {{post.body}}
-    </div>
+    </div><!-- displays the main content body of the post -->
   </article>
-
+<!-- checks if there are comments in response that are tied to the post -->
   {{#if post.comments}}
 
   <section class="card">
     <div class="card-header">
       <h3>Comments</h3>
     </div>
-
-    <div class="card-body">
+<!-- iterates over each comment in the "post.comments" array -->
+    <div class="card-body"><!-- -->
       {{#each post.comments as |comment|}}
       {{> comments}}
       {{/each}}
-    </div>
-  </section>
+    </div><!-- > partial template includes the comments for each comment in the iteration -->
+  </section><!-- ends the sequence of iterations -->
   {{/if}}
 
   <form id="new-comment-form" class="card">
@@ -33,7 +33,7 @@
 
     <div class="card-body">
       <input type="hidden" name="post-id" value="{{post.id}}" />
-
+<!-- stores the ID of the post for which the comment is being added (stays hidden) -->
       <label class="form-label" for="comment-body">Comment</label>
 
       <textarea name="comment-body" class="form-input"></textarea>

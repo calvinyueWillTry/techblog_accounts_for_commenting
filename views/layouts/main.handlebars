@@ -10,7 +10,7 @@
     />
     <link rel='stylesheet' href='/css/style.css' />
   </head>
-
+<!--#if is a conditional statement that checks if the variable loggedIn (line 19) is truthy. If it is, line 23 is called, and line 22 is rendered-->
   <body class='flex-column min-100-vh'>
     <nav class='navbar'>
       <ul class='flex-row'>
@@ -22,7 +22,8 @@
           <li class='li-inline nav-item'><a href='/login'>Login</a></li>
         {{/if}}
       </ul>
-    </nav>
+<!-- If falsey, then the content inside line 21 is called, and line 22 is rendered-->
+    </nav> <!-- #if is a conditional statement that checks if dashboard is truthy -->
     <header class='hero'>
       {{#if dashboard}}
         <h1 class='app-title'><a href='/dashboard'>Your Dashboard</a></h1>
@@ -30,11 +31,11 @@
         <h1 class='app-title'><a href='/'>The Tech Blog</a></h1>
       {{/if}}
     </header>
-
+<!-- If truthy, then renders line 29. If falsey, renders line 31 -->
     <main class='col-auto'>
       {{{body}}}
-    </main>
-
+    </main><!-- used to insert raw HTML content into the template -->
+<!--#if is a conditional statement that checks if dashboard is truthy -->
     {{#if dashboard}}
       <footer class='footer flex-row justify-center'>
         <a href='/dashboard/new'>➕ New Post</a>
@@ -44,10 +45,10 @@
         &copy; The Tech Blog Folks
       </footer>
     {{/if}}
-
+<!-- If truthy, then renders line 41. If falsey, renders line 45 -->
     {{#if loggedIn}}
       <script src='/js/logout.js'></script>
     {{/if}}
   </body>
-
+<!--checks if the user is logged in. If so, the script tag that links to the logout.js file is included in the template -->
 </html>

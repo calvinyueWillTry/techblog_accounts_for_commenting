@@ -1,8 +1,8 @@
-module.exports = {
-  formatDate: (date) => {
-    // Format date as MM/DD/YYYY
-    return date.toLocaleString();
-  },
+module.exports = { //export to the dashboard and home handlebars files
+  formatDate: (date) => { //function takes a date parameter as input
+//calls the toLocaleString() method on date, 
+    return date.toLocaleString();//stringnifies the date using the system's default locale and formatting options
+  },// Formats date as MM/DD/YYYY
 };
 // module.exports = {
 

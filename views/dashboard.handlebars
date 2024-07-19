@@ -1,8 +1,8 @@
-<div class="posts list-group">
+<div class="posts list-group"><!-- helper that iterates over each post object value in the "posts" array -->
   {{#each posts}}
-  <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}">
-    <span>{{title}}</span>
-    <span>{{formatDate createdAt}}</span>
-  </a>
+  <a class="list-item flex-row justify-space-between" href="/dashboard/edit/{{id}}"><!--link to edit the post with the post's ID included in the URL -->
+    <span>{{title}}</span><!-- placeholder for the title of the post. It will be replaced with the actual title of each post in the list -->
+    <span>{{formatDate createdAt}}</span><!-- uses the helper function formatDate to format the creation date before displaying it -->
+  </a><!-- end of the each block, indicating that the iteration over the "posts" array or object is complete -->
   {{/each}}
 </div>

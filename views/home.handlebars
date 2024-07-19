@@ -1,17 +1,17 @@
-<div class="posts">
+<div class="posts"><!-- Handlebars helper that iterates over each post in the "posts" array -->
   {{#each posts}}
   <article class="card">
     <div class="card-header flex-row justify-space-between">
-      <h2>
+      <h2><!-- heading element containing a URL link to the post with the post's ID included in the URL -->
         <a href="/post/{{id}}">{{title}}</a>
-      </h2>
-      <div>
+      </h2><!-- heading element containing a URL link to the post with the post's title included in the URL -->
+      <div><!-- displays the username of the post author -->
         Posted by {{user.username}} on {{ formatDate createdAt}}
-      </div>
+      </div><!-- helper formatted creation date of the post -->
     </div>
     <div class="card-body">
       {{body}}
-    </div>
-  </article>
+    </div><!-- placeholder for the main content body of the post. -->
+  </article><!-- the iteration over the "posts" array or object is complete -->
   {{/each}}
 </div>
